@@ -1,7 +1,8 @@
+import QrCode from "../components/QrCode"
 
 const QRscreen = () => {
   return (
-    <div>QRscreen</div>
+    <div><QrCode/></div>
   )
 }
 
