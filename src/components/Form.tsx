@@ -10,24 +10,32 @@ const Form = () => {
 
   const HandleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     e.preventDefault();
-    setvalue(e.target.value);
-    setname(e.target.name);
-    if(name && value){
+    const newValue = e.target.value;
+    const newName = e.target.name;
+    setvalue(newValue);
+    setname(newName);
+    if(newName && newValue){
       setFormData((prev) => ({
         ...prev,
-        [name]: value
+        [newName]: newValue
       }));
-    } else alert("the input fields are empty please fill it")
+    } else {
+      alert("The input fields are empty, please fill them");
+    }
   };
 
   const HandleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    const urlobj = new URL(formData.Uri);
-    if(value && name ){
-      navigate("/qr");
+    try{
+    new URL(formData.Uri);
+    if(value && name){
+        navigate("/qr");
     } else {
       alert("navigation failed!!");
       navigate("/");
+    }
+    } catch(err){
+      alert("enter a valid url");
     }
   }
 
