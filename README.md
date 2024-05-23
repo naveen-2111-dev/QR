@@ -1,30 +1,39 @@
-# React + TypeScript + Vite
+# Qr code generator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## tech stack
+- react ⚛️
+- tailwindcss 🪄
+- typeScript 🧑‍🚀
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
+### dependencies
+```json
+"dependencies": {
+    "autoprefixer": "^10.4.19",
+    "qrcode.react": "^3.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^5.2.1",
+    "react-router-dom": "^6.23.1",
+    "tailwindcss": "^3.4.3"
   },
-}
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## local Use
+- git clone
+``` gitclone
+git clone <repo-url>
+```
+
+-node_modules
+``` yarn
+yarn
+```
+
+- scripts
+```run
+yarn dev
+or
+npm run dev
+````
+
+`under development`
