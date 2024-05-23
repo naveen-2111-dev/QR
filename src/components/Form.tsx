@@ -3,7 +3,7 @@ import { UseQRcontext } from "../context/QRcontext";
 import { useNavigate } from "react-router-dom";
 
 const Form = () => {
-  const { setFormData, formData } = UseQRcontext();
+  const { setFormData, formData, seturltype } = UseQRcontext();
   const [value, setvalue] = useState("");
   const [name, setname] = useState("");
   const navigate = useNavigate();
@@ -27,7 +27,8 @@ const Form = () => {
   const HandleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     try{
-    new URL(formData.Uri);
+      const obj = new URL(formData.Uri);
+      seturltype(obj.hostname);
     if(value && name){
         navigate("/qr");
     } else {

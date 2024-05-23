@@ -1,7 +1,8 @@
+import Card from "./Card"
 
 const Options = () => {
   return (
-    <div>Options</div>
+    <div><Card images/></div>
   )
 }
 
