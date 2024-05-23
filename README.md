@@ -19,17 +19,16 @@
 ```
 
 ## local Use
-- git clone
+**1.** git clone
 ``` gitclone
 git clone <repo-url>
 ```
 
--node_modules
+**2.** node_modules
 ``` yarn
 yarn
 ```
-
-- scripts
+**3.** scripts
 ```run
 yarn dev
 or
