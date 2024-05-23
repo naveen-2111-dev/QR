@@ -9,6 +9,8 @@ interface QRContextType {
         Purpose: string;
         Uri: string;
     }>>;
+    seturltype: React.Dispatch<React.SetStateAction<string>>;
+    urltype: string;
 }
 
 const QRContext = createContext<QRContextType | undefined>(undefined);
@@ -18,8 +20,9 @@ export const QRcontextProvider = ({ children }: { children: React.ReactNode }) =
         Purpose: "",
         Uri: ""
     });
+    const [urltype, seturltype] = useState("");
 
-    const ReturnValue = { formData, setFormData };
+    const ReturnValue = { formData, setFormData, urltype, seturltype };
     return (
         <QRContext.Provider value={ReturnValue}>
             {children}
